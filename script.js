@@ -1,5 +1,5 @@
 /* Task 1 */
-var heading = document.getElementById('heading');
+var heading = document.getElementById('heading');       //Always returns an array;
 console.log(heading.innerText);
 // heading.innerText = "Text changed";
 heading.innerHTML = "<h3> Text changed </h3>";
@@ -14,5 +14,17 @@ textBtn.addEventListener('click', function(event){
     task2.appendChild(paragraph);
 });
 
-
+//Task 2b:
+function changeBGcolor(event){
+    var body = document.getElementsByTagName('body')[0];
+    body.style.backgroundColor = event.target.innerText.toLowerCase();
+    
+    //Another way of doing it:
+    // if(event.target.innerText == "Red"){
+    //     body.style.backgroundColor = 'red';
+    // }
+    // if(event.target.innerText == "Green"){
+    //     body.style.backgroundColor = 'green';
+    // }
+}
 /* Task 4 using jQuery */
